@@ -22,8 +22,9 @@ namespace VizeFinalHesaplama
             if (textBox1.Text == "")
             {
                 MessageBox.Show("LÜTFEN VİZE NOTUNUZU GİRİNİZ!!!", "UYARI");
+                label1.Text = "";
                 textBox1.Focus();
-                return;
+                //return;
 
             }
             //else if (Convert.ToInt32(textBox1.Text) < 0 || Convert.ToInt32(textBox1.Text) > 100)
@@ -34,6 +35,8 @@ namespace VizeFinalHesaplama
             else if (textBox2.Text == "" & textBox3.Text == "")
             {
                 MessageBox.Show("LÜTFEN FİNAL NOTUNUZU GİRİNİZ!!!", "UYARI");
+                label1.Text = "";
+                textBox2.Focus();
             }
 
             //else if (Convert.ToInt32(textBox2.Text) < 0 || Convert.ToInt32(textBox2.Text) > 100)
@@ -66,7 +69,7 @@ namespace VizeFinalHesaplama
             }
 
 
-            if (textBox3.Text != "")
+            if (textBox3.Text != "" & textBox1.Text != "")
             {
                 int bort = (Convert.ToInt32(textBox1.Text) + Convert.ToInt32(textBox3.Text)) / 2;
                 if (Convert.ToInt32(textBox3.Text) >= 50 & bort >= 50)
@@ -85,13 +88,14 @@ namespace VizeFinalHesaplama
                 {
                     label1.Text = "ORTALAMANIZ : " + bort + " DERSTEN KALDINIZ!!!";
                 }
-                if (Convert.ToInt32(textBox3.Text) < 0 || Convert.ToInt32(textBox3.Text) > 100)
-                {
-                    MessageBox.Show("lütfen 1 ile 100 arasında değer giriniz!!!", "UYARI");
-                    label1.Text = "SONUÇ";
-                    textBox3.Text = "";
-                    textBox3.Focus();
-                }
+                //if (Convert.ToInt32(textBox3.Text) < 0 || Convert.ToInt32(textBox3.Text) > 100)
+                //{
+                //    MessageBox.Show("lütfen 1 ile 100 arasında değer giriniz!!!", "UYARI");
+                //    label1.Text = "SONUÇ";
+                //    textBox3.Text = "";
+                //    textBox3.Focus();
+                //}
+                
             }
         }
 
@@ -100,11 +104,11 @@ namespace VizeFinalHesaplama
 
             try
             {
-                if (textBox1.Text == "")
-                {
-                    return;
-                }
-                else if (Convert.ToInt32(textBox1.Text) < 0 || Convert.ToInt32(textBox1.Text) > 100)
+                //if (textBox1.Text == "")
+                //{
+                  //  return;
+                //}
+                if (Convert.ToInt32(textBox1.Text) < 0 || Convert.ToInt32(textBox1.Text) > 100)
                 {
                     MessageBox.Show("Değer 0-100 arasında olmalı");
                     textBox1.Text = "";
@@ -130,11 +134,11 @@ namespace VizeFinalHesaplama
         {
             try
             {
-                if (textBox2.Text == "")
-                {
-                    return;
-                }
-                else if (Convert.ToInt32(textBox2.Text) < 0 || Convert.ToInt32(textBox2.Text) > 100)
+                //if (textBox2.Text == "")
+                //{
+                  //  return;
+                //}
+                if (Convert.ToInt32(textBox2.Text) < 0 || Convert.ToInt32(textBox2.Text) > 100)
                 {
                     MessageBox.Show("Değer 0-100 arasında olmalı");
                     textBox2.Text = "";
@@ -161,11 +165,11 @@ namespace VizeFinalHesaplama
         {
             try
             {
-                if (textBox3.Text == "")
-                {
-                    return;
-                }
-                else if (Convert.ToInt32(textBox3.Text) < 0 || Convert.ToInt32(textBox3.Text) > 100)
+                //if (textBox3.Text == "")
+                //{
+                  //  return;
+                //}
+                if (Convert.ToInt32(textBox3.Text) < 0 || Convert.ToInt32(textBox3.Text) > 100)
                 {
                     MessageBox.Show("Değer 0-100 arasında olmalı");
                     textBox3.Text = "";
